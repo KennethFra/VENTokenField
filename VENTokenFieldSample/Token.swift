@@ -7,10 +7,22 @@
 
 import UIKit
 
+typealias TapTokenHandler = ((Token) -> Void)
+
 class Token : UIView {
-    var highlighted: Bool = false
-    var didTapTokenBlock: (() -> Void)? = nil
-    var colorScheme: UIColor = .systemTeal
+    let backgroundGray = UIColor(displayP3Red: 233.0/255.0, green: 233.0/255.0, blue: 233.0/255.0, alpha: 1.0)
+
+    var highlighted: Bool = false {
+        didSet(newValue) {
+            updateTinting()
+        }
+    }
+    var didTapTokenBlock: TapTokenHandler? = nil
+    var colorScheme: UIColor = .systemTeal {
+        didSet {
+            updateTinting()
+        }
+    }
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var backgroundView: UIView!
@@ -26,6 +38,7 @@ class Token : UIView {
 
     func setup() {
         backgroundView.layer.cornerRadius = 5
+        
         let tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(didTapToken))
         addGestureRecognizer(tapGestureRecognizer)
 
@@ -41,22 +54,13 @@ class Token : UIView {
         titleLabel.sizeToFit()
     }
 
-    func setHighlighted(highlighted: Bool) {
-        // TODO USE didSet
-        self.highlighted = highlighted
+    func updateTinting() {
         titleLabel.textColor = highlighted ? .white : colorScheme
-        backgroundView.backgroundColor = highlighted ? colorScheme : .clear
+        backgroundView.backgroundColor = highlighted ? colorScheme : backgroundGray
     }
-
-    func setColorScheme(colorScheme: UIColor) {
-        // TODO USE didSet
-        self.colorScheme = colorScheme
-        titleLabel.textColor = colorScheme
-        setHighlighted(highlighted: highlighted)
-    }
-
+    
     @objc func didTapToken(tapGestureRecognizer: UITapGestureRecognizer) {
-        didTapTokenBlock?()
+        didTapTokenBlock?(self)
     }
 }
 

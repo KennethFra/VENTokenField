@@ -14,9 +14,12 @@ protocol BackspaceTextFieldDelegate : UITextFieldDelegate {
 class BackspaceTextField : UITextField {
     var backspaceDelegate:  BackspaceTextFieldDelegate?
 
-    func keyboardInputShouldDelete(textField: UITextField) -> Bool {
-        guard let text = text, text.isEmpty else { return true }
+    override public func deleteBackward() {
+        defer {
+            super.deleteBackward()
+        }
+        
+        guard let text = text, text.isEmpty else { return }
         backspaceDelegate?.textFieldDidEnterBackspace(textField: self)
-        return true
     }
 }

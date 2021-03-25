@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00340260260651FA00198767 /* SwiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0034025F260651FA00198767 /* SwiftViewController.m */; };
+		00340266260673AC00198767 /* Token.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004EB14A2605014400841385 /* Token.xib */; };
 		004EB14E2605014500841385 /* TokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004EB14C2605014500841385 /* TokenField.swift */; };
 		004EB14F2605014500841385 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004EB14D2605014500841385 /* Token.swift */; };
 		004EB1502605014500841385 /* BackspaceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004EB14B2605014400841385 /* BackspaceTextField.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0034025F260651FA00198767 /* SwiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftViewController.m; sourceTree = "<group>"; };
+		003402632606558600198767 /* SwiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftViewController.h; sourceTree = "<group>"; };
 		004EB14A2605014400841385 /* Token.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Token.xib; sourceTree = "<group>"; };
 		004EB14B2605014400841385 /* BackspaceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackspaceTextField.swift; sourceTree = "<group>"; };
 		004EB14C2605014500841385 /* TokenField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenField.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				B692A4801954D9CA00344E36 /* Main.storyboard */,
 				B692A4831954D9CA00344E36 /* ViewController.h */,
 				B692A4841954D9CA00344E36 /* ViewController.m */,
+				0034025F260651FA00198767 /* SwiftViewController.m */,
+				003402632606558600198767 /* SwiftViewController.h */,
 				B692A4861954D9CA00344E36 /* Images.xcassets */,
 				004EB14B2605014400841385 /* BackspaceTextField.swift */,
 				004EB14A2605014400841385 /* Token.xib */,
@@ -270,6 +276,7 @@
 				B692A4871954D9CA00344E36 /* Images.xcassets in Resources */,
 				B692A4791954D9CA00344E36 /* InfoPlist.strings in Resources */,
 				B692A4821954D9CA00344E36 /* Main.storyboard in Resources */,
+				00340266260673AC00198767 /* Token.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +365,7 @@
 				B692A47F1954D9CA00344E36 /* AppDelegate.m in Sources */,
 				B692A47B1954D9CA00344E36 /* main.m in Sources */,
 				004EB1502605014500841385 /* BackspaceTextField.swift in Sources */,
+				00340260260651FA00198767 /* SwiftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
